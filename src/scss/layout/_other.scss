@@ -1,0 +1,64 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.other-contenedor {
+    display: flex;
+    gap: 1rem;
+    padding: 2rem 0;
+    text-align: center;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.other-gallery {
+    display: flex;
+    flex: 0 0 auto;
+    width: 50%;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+    width: 95%;
+    height: 95%;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    }
+}
+
+.item-name {
+    font-size: 1.5rem;
+    font-weight: 350;
+}
+
+.linea-divisoria {
+    width: 97.5%;
+    border-bottom: 2px solid v.$gris;
+    margin: 1rem auto; 
+}
+
+.other-tit {
+    margin-bottom: 0.5rem; 
+    padding: 2rem;
+}
+
+.other-contenedor::-webkit-scrollbar {
+    height: 6px;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.other-contenedor::-webkit-scrollbar-thumb {
+    background: v.$gris; 
+    border-radius: 2px;
+    width: 30%;
+}
+
+@include m.telefono {
+    .other-gallery {
+        width: 20%;
+    }
+}

@@ -1,0 +1,50 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.publicidad {
+    padding: 2rem;
+    text-align: center;
+
+    h3 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    color: v.$blanco;
+    text-align: center;
+    }
+
+    .publi-contenedor {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+        border-bottom: 2px solid v.$gris;
+    }
+
+    .coaching, .recipes, .events {
+        padding: 1rem;
+        border-radius: 8px;
+        flex: 1 1 30%; 
+        max-width: 300px; 
+        text-align: center;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+        font-weight: 350;
+    }
+}
+
+.learn-more{
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 1.3rem;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+
+    &:hover {
+        background-color: darken(v.$verde, 10%);
+    }
+}

@@ -1,0 +1,71 @@
+@use '../base/variables' as v;
+
+.header {
+    background-color: v.$verde;
+    padding: 2rem;
+    position: relative;
+
+    .contenido-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .social-icons {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+
+            a {
+                color: v.$blanco;
+                text-decoration: none;
+                font-size: 2rem;
+            }
+        }
+    }
+
+    .nombre-navegacion {
+        text-align: center;
+
+        h1 {
+            color: v.$blanco;
+            font-size: 3.5rem;
+            text-transform: uppercase;
+            margin: 0 0 1rem 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+
+            a {
+                color: v.$blanco;
+                text-decoration: none;
+                font-size: 1.3rem;
+            }
+        }
+    }
+
+    .login {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        background-color: v.$gris;
+        color: v.$blanco;
+        border: none;
+        border-radius: 5px;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        font-size: 1.3rem;
+    }
+
+    .prod-presentacion {
+        margin-top: 6rem;
+        text-align: center;
+
+        h3 {
+            color: v.$blanco;
+            font-size: 4rem;
+        }
+    }
+}

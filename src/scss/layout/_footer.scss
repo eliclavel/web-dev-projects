@@ -1,0 +1,51 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.footer {
+    display: flex; 
+    flex-direction: column; /* Cambia a columna si quieres una disposición vertical */
+    align-items: center;
+    gap: 2rem; 
+    margin: 2rem 0; 
+}
+
+.footer input {
+    width: 50%; 
+    padding: 0.5rem; 
+    font-size: 1rem; 
+    border: 1px solid v.$blanco; 
+    border-radius: 5px; 
+}
+
+.footer input:focus {
+    border-color: v.$negro;
+    outline: none;
+}
+
+.footer button {
+    padding: 0.5rem 1rem;
+    font-size: 1.3rem;
+    color: v.$blanco;
+    background-color: v.$gris; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@include m.desktop {
+    .footer input {
+        width: 30%;
+    }
+}
+
+@include m.tablet {
+    .footer input {
+        width: 30%;
+    }
+}
+
+@include m.telefono {
+    .footer input {
+        width: 35%;
+    }
+}
